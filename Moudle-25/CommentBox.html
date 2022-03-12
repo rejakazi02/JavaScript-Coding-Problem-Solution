@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+
+</head>
+<body>
+    
+    <h2>Add your Comment Please</h2>
+    <section>
+        <h4>Your Comment</h4>
+        <div id="comment-container">
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit labore eveniet tenetur nam ad modi quibusdam tempore ducimus doloribus hic quasi exercitationem saepe temporibus distinctio nesciunt nulla, maxime cum in.</p>
+<p>Quibusdam quidem tenetur mollitia suscipit quo adipisci, iure, natus amet aspernatur aut ipsa pariatur temporibus tempora repellendus autem excepturi quia vitae rerum rem consequatur inventore possimus minima nobis. Consectetur, dignissimos.</p>
+
+        </div>
+    </section>
+    <div>
+        <p>Add your comment</p>
+
+        <textarea name="" id="newComment" cols="60" rows="4"></textarea><br>
+        <button id="submit-comment">Post</button>
+    </div>
+
+<script>
+// document.getElementById('submit-comment').addEventListener('click', function () {
+
+//     const commentText = document.getElementById('newComment');
+//     // const userComment = commentText.value;
+//     const newCommentAdd = document.createElement('p');
+//     newCommentAdd.innerText = commentText.value;
+    
+//     const commentContainer = document.getElementById('comment-container');
+     
+//     commentContainer.appendChild(newCommentAdd);
+//      commentText.value = '';
+
+// })
+
+
+document.getElementById('submit-comment').addEventListener('click', function () {
+
+    const commentAdd = document.getElementById('newComment');
+    const newCommentAdd = document.createElement('h3');
+    newCommentAdd.innerText = commentAdd.value;
+    const commentContainers = document.getElementById('comment-container');
+    commentContainers.appendChild(newCommentAdd);
+    commentAdd.value = '';
+    
+})
+
+</script>
+</body>
+</html>

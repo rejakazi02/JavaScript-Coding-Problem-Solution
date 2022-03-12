@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Js</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+<section id="blogs">
+
+    <article>
+
+        <h1 id="javaHead" class="blog">Hello, Javascript</h1>
+   <h3 class="blog">how are you?</h3>
+   <h4 class="blog">what are you doing?</h4>
+   <h5 class="blog">where are you now?</h5>
+   <p  class="lorem blog">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi similique qui saepe exercitationem praesentium aliquid incidunt pariatur voluptate soluta, asperiores repellat aperiam, cum laborum ipsum debitis iste perspiciatis obcaecati quos.</p>
+    </article>
+    
+</section>
+    
+
+    <script src="script.js"></script>
+
+    <script>
+
+        const clogTitel = document.getElementsByTagName('h1');
+        for (const h1 of clogTitel) {
+            console.log(h1.innerText);
+            
+        }
+
+    //    const fast = document.getElementById('javaHead').style.backgroundColor = 'red';
+    const fast = document.getElementById('javaHead'); 
+       fast.innerText = 'Title Updated by js';
+       fast.style.backgroundColor = "yellow";
+
+       //add article 
+
+const article = document.createElement('article');
+article.classList.add('blog');
+const h3 = document.createElement('h3');
+h3.innerText = 'My Awesome Bloge-5';
+const p = document.createElement('p');
+p.innerText = 'bal pelano mostan';
+
+article.appendChild(h3);
+article.appendChild(p);
+const blogesection = document.getElementById('blogs');
+blogesection.appendChild(article);
+
+
+//explore getelementsByclassname
+
+const blogs = document.getElementsByClassName('blog');
+for (const blog of blogs) {
+    blog.style.border = '2px solid blue';
+    blog.borderRedious = '10px';
+}
+
+    </script>
+</body>
+</html>

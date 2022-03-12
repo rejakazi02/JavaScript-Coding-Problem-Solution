@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+</head>
+<body>
+    <h1>Event niye Clickbazi</h1>
+
+    <!-- alert proparty in onclick -->
+
+    <button onclick="alert(7)">Click me (alert proparty )</button>
+
+    <!-- console property in onclick -->
+
+    <button onclick="console.log(78)">Click me (console property)</button>
+
+    <!-- Function property in onclick -->
+
+    <button onclick="makeRed()">Click me (Function property and color change)</button>
+    <button id="make-blue-button">Click me (F color change)</button>
+
+
+
+
+
+    <!-- <script src="js/script.js"></script> -->
+
+    <script>
+
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+            
+        }
+
+        const blueButton = document.getElementById('make-blue-button');
+
+        blueButton.onclick = function maleBlue() {
+            document.body.style.backgroundColor = 'blue';
+            
+        }
+    </script>
+</body>
+</html>

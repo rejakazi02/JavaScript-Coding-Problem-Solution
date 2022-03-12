@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+
+
+
+    <h2>More Events</h2>
+    <section>
+
+        <h3 id="select-info">Very Very Important Informarion</h3>
+        <input id="deleteConfirm" type="text" placeholder="Plese type delete">
+        <button id="delete_btn" disabled>Delete</button>
+    </section>
+    <script>
+        // Display none
+        const p = document.getElementById('delete_btn').addEventListener('click', function () {
+
+            document.getElementById('select-info').style.display = 'none';
+
+
+        })
+
+        // Display  Focus
+
+        document.getElementById('deleteConfirm').addEventListener('focus', function () {
+
+            // document.getElementById('select-info').style.display = 'none';
+            document.body.style.backgroundColor = 'skyblue';
+
+        })
+
+        // Display blur
+
+
+        document.getElementById('deleteConfirm').addEventListener('blur', function () {
+
+            // document.getElementById('select-info').style.display = 'none';
+            document.body.style.backgroundColor = 'white';
+
+        })
+
+        //keydown
+
+        //        document.getElementById('deleteConfirm').addEventListener('keydown', function () {
+
+        // const deleteField = document.getElementById('deleteConfirm');
+        // console.log(deleteField.value)
+        // })
+
+
+        // //keypress
+
+        // document.getElementById('deleteConfirm').addEventListener('keypress', function () {
+
+
+        // const deleteField = document.getElementById('deleteConfirm');
+        // console.log(deleteField.value)
+        // })
+
+        //keyup
+
+        document.getElementById('deleteConfirm').addEventListener('keyup', function (event) {
+        const deleteBtn = document.getElementById('delete_btn');
+
+        if (event.target.value == 'delete') {
+            deleteBtn.removeAttribute('disabled');
+            
+        }
+        else {
+            deleteBtn.setAttribute('disabled', true);
+        }
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Management</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <h1 class="text-secondary text-center m-4 py-2">Baper Money Management</h1>
+    </header>
+    <main>
+        <!-- total section -->
+        <section class="mt-5 pt-md-5 pb-5 d-md-flex">
+            <!-- only for picture -->
+            <div class="m-2 p-md-2 container-fluid">
+                <img class="mx-md-5 px-md-3 img-fluid" src="images/money&calc.jpg" alt="" />
+            </div>
+            <!-- this is total calculation division -->
+            <div id="total-calculate-background" class="px-md-5 px-2 ps-md-3 mx-5 pt-1 mb-md-5">
+                <div>
+                    <!-- income -->
+                    <h4 class="text-center my-5">Income</h4>
+                    <div class="d-flex div-position px-5 ms-3">
+                        <div>
+                            <h5 class="me-1">Income:</h5>
+                        </div>
+                        <div>
+                            <input class="bg-secondary container-fluid ms-1 text-white" type="number" name=""
+                                id="income-amount" min="10000" />
+                        </div>
+                    </div>
+                </div>
+                <!-- expenses -->
+                <div>
+                    <div>
+                        <h4 class="text-center my-5">Expenses</h4>
+                        <div class="d-flex div-position px-5 ms-3">
+                            <div>
+                                <h5 class="me-1 my-2">Food:</h5>
+                                <h5 class="me-1 my-4">Rent:</h5>
+                                <h5 class="me-1 mt-2">Clothes:</h5>
+                            </div>
+                            <div>
+                                <input class="bg-primary container-fluid ms-1 text-white my-2" type="number" name=""
+                                    id="food-amount" min="3000" />
+                                <input class="bg-secondary container-fluid ms-1 text-white my-2" type="number" name=""
+                                    id="rent-amount" min="2000" />
+                                <input class="bg-secondary container-fluid ms-1 text-white my-2" type="number" name=""
+                                    id="clothe-amount" min="500" />
+                            </div>
+                        </div>
+                        <div class="mx-5 px-5">
+                            <button id="calculate-button" class="button-design rounded px-4 py-1 mx-5 mt-3">
+                                Calculate
+                            </button>
+                        </div>
+                        <!-- error comment -->
+                        <h6 id="cost-error-update" class="text-danger text-center"></h6>
+                        <h6 id="negative-error-update" class="text-danger text-center"></h6>
+                    </div>
+                </div>
+                <!-- total expense and balance -->
+                <div class="mt-5">
+                    <h3 class="text-center">
+                        Total Expenses: <span id="expense-update">00</span>
+                    </h3>
+                    <h3 class="text-center">
+                        Balance: <span id="balance-update">00</span>
+                    </h3>
+                </div>
+                <!-- declare save percentage and calculate-->
+                <div class="d-flex div-position container-fluid mx-2 mt-3">
+                    <div class="mt-2 mx-2">
+                        <h5>Save:</h5>
+                    </div>
+                    <div class="mx-2">
+                        <input class="bg-secondary container-fluid ms-1 text-white my-2" type="number" name=""
+                            id="save-amount" min="10" />
+                    </div>
+                    <div class="mx-2 mt-2">
+                        <h4>%</h4>
+                    </div>
+                    <div class="mx-2 mt-2">
+                        <button id="save-button" class="button-design rounded px-4 py-1">
+                            Save
+                        </button>
+                    </div>
+                </div>
+                <!-- save and remaining error -->
+                <h6 id="save-error" class="text-danger text-center"></h6>
+                <h6 id="remaining-error" class="text-danger text-center"></h6>
+                <!-- rest amount -->
+                <div class="mt-5 pb-3">
+                    <h3 class="text-center">
+                        Saving Amount: <span id="save-update">00</span>
+                    </h3>
+                    <h3 class="text-center">
+                        Remaining Balance: <span id="remaining-update">00</span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- js link -->
+    <script src="add.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+/* calculation background design and space  */
+#total-calculate-background {
+    background-color: rgb(201, 206, 206);
+    height: auto;
+    width: auto;
+  }
+  /* design button */
+  .button-design {
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border: none;
+  }
+  .button-design:hover {
+    background-color: darkcyan;
+  }
+  /* for some center positioning */
+  .div-position {
+    justify-content: center;
+    align-items: center;
+  }
+  
