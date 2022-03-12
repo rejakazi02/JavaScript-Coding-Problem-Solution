@@ -101,7 +101,7 @@ const remaing = document.getElementById('save-update');
     const saveAmount = save / 100;
     const totalSave = income * saveAmount;
     remaing.innerText = totalSave;
-
+// code for Remaining blance
     const remmaing = document.getElementById('remaining-update');
      const t = calculateBasic('balance');
      const f = parseFloat(t.value);
